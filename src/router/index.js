@@ -27,9 +27,9 @@ export default new Router({
             component: () => import('../ProductPage/ProductLists/NewProductCreation.vue'),
         },
         {
-            path: '/product-lists/product-lists-pagination',
-            name: 'productlistspagination',
-            component: () => import('../ProductPage/ProductLists/ProductListsPagination.vue'),
+            path: '/product-lists/customer-lists',
+            name: 'customerlists',
+            component: () => import('../ProductPage/ProductLists/CustomerLists.vue'),
         },
         
         // Dashboards

@@ -28,7 +28,7 @@
                     :headers="headersDataTable"
                     :items="dataItems"
                     :search="searchItems"
-                    item-key="wicID"
+                    item-key="userID"
                     select-all
                     class="elevation-1"
                 >
@@ -41,11 +41,11 @@
                             >
                             </v-checkbox>
                         </td>
-                        <td class="text-xs-right">{{ props.item.userID }}</td>
-                        <td class="text-xs-right">{{ props.item.fullName }}</td>
-                        <td class="text-xs-right">{{ props.item.email }}</td>
-                        <td class="text-xs-right">{{ props.item.signUpBy }}</td>
-                        <td class="text-xs-right">{{ props.item.lastActivityBy }}</td>
+                        <td>{{ props.item.userID }}</td>
+                        <td>{{ props.item.fullName }}</td>
+                        <td>{{ props.item.email }}</td>
+                        <td>{{ props.item.signUpBy }}</td>
+                        <td>{{ props.item.lastActivityBy }}</td>
                     </template>
                     <v-alert v-slot:no-results :value="true" color="error" icon="warning">
                         Your search for "{{ searchItems }}" found no results.
@@ -81,8 +81,36 @@
                         userID: '1',
                         fullName: 'John Smith',
                         email: 'john@gmail.com',
-                        signUpBy: 'Apple',
-                        lastActivityBy: 'iPhone XR'
+                        signUpBy: '2018/08/30',
+                        lastActivityBy: '2019/09/03'
+                    },
+                    {
+                        userID: '2',
+                        fullName: 'Yegor Yuzin',
+                        email: 'yegor@gmail.com',
+                        signUpBy: '2018/09/21',
+                        lastActivityBy: '2019/08/12'
+                    },
+                    {
+                        userID: '3',
+                        fullName: 'Anton Ivanov',
+                        email: 'anton@gmail.com',
+                        signUpBy: '2019/01/06',
+                        lastActivityBy: '2019/06/30'
+                    },
+                    {
+                        userID: '4',
+                        fullName: 'Andrey Krakov',
+                        email: 'andrey@gmail.com',
+                        signUpBy: '2019/02/24',
+                        lastActivityBy: '2019/06/04'
+                    },
+                    {
+                        userID: '5',
+                        fullName: 'Ivan Ivanovic',
+                        email: 'ivan@gmail.com',
+                        signUpBy: '2019/06/25',
+                        lastActivityBy: '2019/08/26'
                     }
                 ]
             }
