@@ -55,8 +55,8 @@
                                 title: 'New Product Creation',
                             },
                             {
-                                href: '/product-lists/product-lists-pagination',
-                                title: 'Product Lists',
+                                href: '/product-lists/customer-lists',
+                                title: 'Customer Lists',
                             },
                         ]
                     },
