@@ -36,6 +36,32 @@
                 menu: [
                     {
                         header: true,
+                        title: 'Product Lists'
+                    },
+                    {
+                        title: 'Product Lists',
+                        icon: 'pe-7s-rocket',
+                        child:[
+                            {
+                                href: '/product-lists/add-item',
+                                title: 'Add item',
+                            },
+                            {
+                                href: '/product-lists/product-lists',
+                                title: 'Product Lists',
+                            },
+                            {
+                                href: '/product-lists/new-product-creation',
+                                title: 'New Product Creation',
+                            },
+                            {
+                                href: '/product-lists/product-lists-pagination',
+                                title: 'Product Lists',
+                            },
+                        ]
+                    },
+                    {
+                        header: true,
                         title: 'Main Navigation',
                     },
                     {

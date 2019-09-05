@@ -9,6 +9,29 @@ export default new Router({
     },
     routes: [
 
+        // Product Lists
+
+        {
+            path: '/product-lists/add-item',
+            name: 'additem',
+            component: () => import('../ProductPage/ProductLists/AddItem.vue'),
+        },
+        {
+            path: '/product-lists/product-lists',
+            name: 'productlists',
+            component: () => import('../ProductPage/ProductLists/ProductLists.vue'),
+        },
+        {
+            path: '/product-lists/new-product-creation',
+            name: 'newproductcreation',
+            component: () => import('../ProductPage/ProductLists/NewProductCreation.vue'),
+        },
+        {
+            path: '/product-lists/product-lists-pagination',
+            name: 'productlistspagination',
+            component: () => import('../ProductPage/ProductLists/ProductListsPagination.vue'),
+        },
+        
         // Dashboards
 
         {
