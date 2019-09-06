@@ -9,6 +9,19 @@ export default new Router({
     },
     routes: [
 
+        // Admin
+
+        {
+            path: '/admin/dashboard',
+            name: 'dashboard',
+            component: () => import('../AdminPage/Dashboard.vue'),
+        },
+        {
+            path: '/admin/login',
+            name: 'logout',
+            component: () => import('../AdminPage/UserPages/Login.vue'),
+        },
+
         // Product Lists
 
         {
@@ -31,6 +44,7 @@ export default new Router({
             name: 'customerlists',
             component: () => import('../ProductPage/ProductLists/CustomerLists.vue'),
         },
+        
         
         // Dashboards
 
