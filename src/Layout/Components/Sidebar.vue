@@ -36,6 +36,24 @@
                 menu: [
                     {
                         header: true,
+                        title: 'Admin',
+                    },
+                    {
+                        title: 'Admin',
+                        icon: 'pe-7s-rocket',
+                        child:[
+                            {
+                                href: '/admin/dashboard',
+                                title: 'Dashboard',
+                            },
+                            {
+                                href: '/admin/login',
+                                title: 'Logout',
+                            },
+                        ]
+                    },
+                    {
+                        header: true,
                         title: 'Product Lists'
                     },
                     {
