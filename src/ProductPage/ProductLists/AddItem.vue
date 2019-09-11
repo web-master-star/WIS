@@ -1,6 +1,6 @@
 <template>
     <v-card>
-        <v-card-title class="headline font-weight-regular bg-dark white--text">Site Title</v-card-title>
+        <v-card-title class="headline font-weight-regular bg-dark white--text">When's it coming?</v-card-title>
         <v-card-text>
             <form class="" action="#" method="post">
                 <div class="row">
