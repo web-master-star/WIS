@@ -66,6 +66,10 @@
                                 href: '/admin/job-post',
                                 title: 'JobPost',
                             },
+                            {
+                                href: '/admin/job-list',
+                                title: 'JobList',
+                            },
                         ]
                     },
                     {
