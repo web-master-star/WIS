@@ -18,8 +18,18 @@ export default new Router({
         },
         {
             path: '/admin/login',
-            name: 'logout',
+            name: 'login',
             component: () => import('../AdminPage/UserPages/Login.vue'),
+        },
+        {
+            path: '/admin/signup',
+            name: 'signup',
+            component: () => import('../AdminPage/UserPages/Signup.vue'),
+        },
+        {
+            path: '/admin/userprofile',
+            name: 'userprofile',
+            component: () => import('../AdminPage/UserPages/UserProfile.vue'),
         },
 
         // Product Lists
