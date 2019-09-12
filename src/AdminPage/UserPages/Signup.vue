@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="full-height">
     <div class="h-100 bg-premium-dark">
       <div class="d-flex h-100 justify-content-center align-items-center">
         <b-col md="8" class="mx-auto app-login-box">
@@ -46,7 +46,13 @@
                     style="min-height: 96px"
                     type="password"
                   ></v-text-field>
-                  <v-text-field v-model="phone" outline color="deep-purple" label="Phone" mask="phone"></v-text-field>
+                  <v-text-field
+                    v-model="phone"
+                    outline
+                    color="deep-purple"
+                    label="Phone"
+                    mask="phone"
+                  ></v-text-field>
                   <v-text-field
                     v-model="companyName"
                     :rules="[rules.companyNameCheck(1)]"
@@ -80,10 +86,7 @@
                   </v-checkbox>
                   <h6 class="mb-0">
                     Already have an account?
-                    <a
-                      href="#/admin/login"
-                      class="text-primary"
-                    >Sign in</a>
+                    <a href="#/admin/login" class="text-primary">Sign in</a>
                     |
                     <a href="javascript:void(0);" class="text-primary">
                       Recover
@@ -141,3 +144,9 @@ export default {
   })
 };
 </script>
+
+<style scoped>
+.full-height {
+  height: 100vh !important;
+}
+</style>
