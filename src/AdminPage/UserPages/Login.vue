@@ -37,7 +37,7 @@
                                 <div class="divider"/>
                                 <h6 class="mb-0">
                                     No account?
-                                    <a href="javascript:void(0);" class="text-primary">Sign up now</a>
+                                    <a href="#/admin/signup" class="text-primary">Sign up now</a>
                                 </h6>
                             </div>
                             <div class="modal-footer clearfix">
@@ -46,7 +46,7 @@
                                         Password</a>
                                 </div>
                                 <div class="float-right">
-                                    <b-button variant="primary" size="lg" href="#/admin/dashboard">Login to Dashboard</b-button>
+                                    <b-button variant="primary" size="lg" href="#/admin/userprofile">Login</b-button>
                                 </div>
                             </div>
                         </div>
