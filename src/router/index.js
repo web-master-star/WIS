@@ -18,6 +18,7 @@ export default new Router({
         },
         {
             path: '/admin/login',
+            meta: {layout: 'userpages'},
             name: 'login',
             component: () => import('../AdminPage/UserPages/Login.vue'),
         },
