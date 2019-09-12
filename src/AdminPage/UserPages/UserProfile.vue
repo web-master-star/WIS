@@ -1,32 +1,18 @@
 <template>
   <v-card class="mx-auto">
-    <v-system-bar color="deep-purple darken-4" dark>
-      <v-spacer></v-spacer>
-      <v-icon small>mdi-square</v-icon>
-      <v-icon class="ml-1" small>mdi-circle</v-icon>
-      <v-icon class="ml-1" small>mdi-triangle</v-icon>
-    </v-system-bar>
     <v-toolbar color="deep-purple accent-4" cards dark flat>
       <v-btn icon>
-        <!-- <v-icon>mdi-arrow-left</v-icon> -->
         <v-icon>edit</v-icon>
       </v-btn>
       <v-card-title class="title font-weight-regular">User Profile</v-card-title>
-      <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
     </v-toolbar>
     <v-form ref="form" v-model="form" class="pa-3 pt-4">
       <v-text-field
-        v-model="userName"
-        :rules="[rules.userNameCheck(1)]"
+        v-model="fullName"
+        :rules="[rules.fullNameCheck(1)]"
         box
         color="deep-purple"
-        label="User Name"
+        label="Full Name"
         style="min-height: 96px"
         type="text"
       ></v-text-field>
@@ -35,7 +21,8 @@
         :rules="[rules.email]"
         box
         color="deep-purple"
-        label="Email address"
+        label="Email"
+        style="min-height: 96px"
         type="email"
       ></v-text-field>
       <v-text-field
@@ -57,18 +44,17 @@
         style="min-height: 96px"
         type="text"
       ></v-text-field>
-      <v-text-field
+      <v-select
         v-model="department"
-        :rules="[rules.departmentCheck(1)]"
-        box
+        :items="departmentItems"
         color="deep-purple"
-        label="Department"
         style="min-height: 96px"
-        type="text"
-      ></v-text-field>
+        chips
+        label="Department"
+        outline
+      ></v-select>
       <v-text-field v-model="phone" box color="deep-purple" label="Phone number" mask="phone"></v-text-field>
     </v-form>
-    <v-divider></v-divider>
     <v-card-actions>
       <v-spacer></v-spacer>
       <v-btn
@@ -86,24 +72,26 @@
 <script>
 export default {
   data: () => ({
-    agreement: false,
-    dialog: false,
     form: false,
     isLoading: false,
-    userName: undefined,
+    fullName: undefined,
     email: undefined,
     password: undefined,
     position: undefined,
-    department: undefined,
+    department: 'Department1',
+    departmentItems: [
+      "Department1",
+      "Department2",
+      "Department3",
+      "Department4"
+    ],
     phone: undefined,
     rules: {
       email: v => (v || "").match(/@/) || "Please enter a valid email",
-      userNameCheck: len => v =>
-        (v || "").length >= len || `Please enter a user name`,
+      fullNameCheck: len => v =>
+        (v || "").length >= len || `Please enter a full name`,
       positionCheck: len => v =>
         (v || "").length >= len || `Please enter a position/title`,
-      departmentCheck: len => v =>
-        (v || "").length >= len || `Please enter a department`,
       length: len => v =>
         (v || "").length >= len || `Invalid character length, required ${len}`,
       password: v =>
@@ -114,20 +102,9 @@ export default {
   }),
 
   methods: {
-    customFilter(item, queryText, itemText) {
-      const textOne = item.name.toLowerCase();
-      const textTwo = item.abbr.toLowerCase();
-      const searchText = queryText.toLowerCase();
-
-      return (
-        textOne.indexOf(searchText) > -1 || textTwo.indexOf(searchText) > -1
-      );
-    },
     save() {
-      alert("Data was saved successfully!");
+      alert("User profile has been saved successfully!");
     }
   }
 };
 </script>
-
-
