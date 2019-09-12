@@ -62,6 +62,10 @@
                                 href: '/admin/companyprofile',
                                 title: 'CompanyProfile',
                             },
+                            {
+                                href: '/admin/job-post',
+                                title: 'JobPost',
+                            },
                         ]
                     },
                     {

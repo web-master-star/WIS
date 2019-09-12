@@ -37,6 +37,11 @@ export default new Router({
             name: 'companyprofile',
             component: () => import('../AdminPage/UserPages/CompanyProfile.vue'),
         },
+        {
+            path: '/admin/job-post',
+            name: 'jobpost',
+            component: () => import('../AdminPage/UserPages/JobPost.vue'),
+        },
 
         // Product Lists
 
