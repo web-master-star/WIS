@@ -18,6 +18,7 @@ export default new Router({
         },
         {
             path: '/admin/login',
+            meta: {layout: 'userpages'},
             name: 'login',
             component: () => import('../AdminPage/UserPages/Login.vue'),
         },
@@ -36,6 +37,11 @@ export default new Router({
             path: '/admin/companyprofile',
             name: 'companyprofile',
             component: () => import('../AdminPage/UserPages/CompanyProfile.vue'),
+        },
+        {
+            path: '/admin/job-post',
+            name: 'jobpost',
+            component: () => import('../AdminPage/UserPages/JobPost.vue'),
         },
 
         // Product Lists
