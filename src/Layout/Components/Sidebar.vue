@@ -58,6 +58,10 @@
                                 href: '/admin/userprofile',
                                 title: 'UserProfile',
                             },
+                            {
+                                href: '/admin/companyprofile',
+                                title: 'CompanyProfile',
+                            },
                         ]
                     },
                     {
