@@ -8,35 +8,9 @@
     </v-toolbar>
     <v-form ref="form" v-model="form" class="pa-3 pt-4">
       <v-container fluid>
-        <v-layout row wrap>
-          <v-flex md6>
-            <v-text-field
-              v-model="fullName"
-              :rules="[rules.fullNameCheck(1)]"
-              outline
-              color="deep-purple"
-              label="Full Name"
-              style="min-height: 96px"
-              type="text"
-            ></v-text-field>
-          </v-flex>
-          <v-flex md6>
-            <v-text-field
-              v-model="email"
-              :rules="[rules.email]"
-              outline
-              color="deep-purple"
-              label="Email"
-              style="min-height: 96px"
-              type="email"
-            ></v-text-field>
-          </v-flex>
-        </v-layout>
-        <v-card-title class="title font-weight-regular">Company Info</v-card-title>
         <v-text-field
           v-model="companyName"
           :rules="[rules.companyNameCheck(1)]"
-          outline
           color="deep-purple"
           label="Company Name"
           style="min-height: 96px"
@@ -59,7 +33,6 @@
               style="min-height: 96px"
               chips
               label="Province"
-              outline
             ></v-select>
             <v-select
               v-model="city"
@@ -68,7 +41,6 @@
               style="min-height: 96px"
               chips
               label="City"
-              outline
             ></v-select>
             <v-select
               v-model="size"
@@ -77,13 +49,11 @@
               style="min-height: 96px"
               chips
               label="Size"
-              outline
             ></v-select>
           </v-flex>
         </v-layout>
         <v-text-field
           v-model="companyWebSiteUrl"
-          outline
           color="deep-purple"
           label="Company WebSite Url"
           style="min-height: 46px"
