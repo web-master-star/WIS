@@ -13,7 +13,7 @@
             <v-text-field
               v-model="fullName"
               :rules="[rules.fullNameCheck(1)]"
-              box
+              outline
               color="deep-purple"
               label="Full Name"
               style="min-height: 96px"
@@ -24,7 +24,7 @@
             <v-text-field
               v-model="email"
               :rules="[rules.email]"
-              box
+              outline
               color="deep-purple"
               label="Email"
               style="min-height: 96px"
@@ -36,7 +36,7 @@
         <v-text-field
           v-model="companyName"
           :rules="[rules.companyNameCheck(1)]"
-          box
+          outline
           color="deep-purple"
           label="Company Name"
           style="min-height: 96px"
@@ -83,7 +83,7 @@
         </v-layout>
         <v-text-field
           v-model="companyWebSiteUrl"
-          box
+          outline
           color="deep-purple"
           label="Company WebSite Url"
           style="min-height: 46px"

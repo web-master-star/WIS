@@ -10,7 +10,7 @@
       <v-text-field
         v-model="fullName"
         :rules="[rules.fullNameCheck(1)]"
-        box
+        outline
         color="deep-purple"
         label="Full Name"
         style="min-height: 96px"
@@ -19,7 +19,7 @@
       <v-text-field
         v-model="email"
         :rules="[rules.email]"
-        box
+        outline
         color="deep-purple"
         label="Email"
         style="min-height: 96px"
@@ -28,7 +28,7 @@
       <v-text-field
         v-model="password"
         :rules="[rules.password, rules.length(6)]"
-        box
+        outline
         color="deep-purple"
         counter="6"
         label="Password"
@@ -38,7 +38,7 @@
       <v-text-field
         v-model="position"
         :rules="[rules.positionCheck(1)]"
-        box
+        outline
         color="deep-purple"
         label="Position/Title"
         style="min-height: 96px"
@@ -53,7 +53,7 @@
         label="Department"
         outline
       ></v-select>
-      <v-text-field v-model="phone" box color="deep-purple" label="Phone number" mask="phone"></v-text-field>
+      <v-text-field v-model="phone" outline color="deep-purple" label="Phone number" mask="phone"></v-text-field>
     </v-form>
     <v-card-actions>
       <v-spacer></v-spacer>
