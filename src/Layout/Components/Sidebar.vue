@@ -48,7 +48,15 @@
                             },
                             {
                                 href: '/admin/login',
-                                title: 'Logout',
+                                title: 'Login',
+                            },
+                            {
+                                href: '/admin/signup',
+                                title: 'SignUp',
+                            },
+                            {
+                                href: '/admin/userprofile',
+                                title: 'UserProfile',
                             },
                         ]
                     },
