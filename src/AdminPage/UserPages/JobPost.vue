@@ -11,7 +11,6 @@
         <v-text-field
           v-model="jobTitle"
           :rules="[rules.jobTitleCheck(1)]"
-          outline
           color="deep-purple"
           label="Title"
           style="min-height: 96px"
@@ -22,7 +21,6 @@
             <v-text-field
               v-model="province"
               :rules="[rules.provinceCheck(1)]"
-              outline
               color="deep-purple"
               label="Province"
               style="min-height: 96px"
@@ -33,7 +31,6 @@
             <v-text-field
               v-model="city"
               :rules="[rules.cityCheck(1)]"
-              outline
               color="deep-purple"
               label="City"
               style="min-height: 96px"
@@ -44,7 +41,6 @@
         <v-text-field
           v-model="responsibilities"
           :rules="[rules.responsibilitiesCheck(1)]"
-          outline
           color="deep-purple"
           label="Responsibilities"
           style="min-height: 96px"
@@ -53,7 +49,6 @@
         <v-text-field
           v-model="qualitifications"
           :rules="[rules.qualitificationsCheck(1)]"
-          outline
           color="deep-purple"
           label="Qualitifications"
           style="min-height: 96px"
@@ -62,7 +57,6 @@
         <v-textarea
           v-model="jobDetails"
           :rules="[rules.jobDetailsCheck(1)]"
-          outline
           color="deep-purple"
           label="Job Details"
           style="min-height: 46px"
@@ -72,7 +66,6 @@
         <v-text-field
           v-model="seniorityLevel"
           :rules="[rules.seniorityLevelCheck(1)]"
-          outline
           color="deep-purple"
           label="Seniority Level"
           style="min-height: 96px"
@@ -89,7 +82,6 @@
               chips
               label="Job Function"
               multiple
-              outline
             ></v-select>
           </v-flex>
           <v-flex md6>
@@ -102,14 +94,12 @@
               chips
               label="Employeement Type"
               multiple
-              outline
             ></v-select>
           </v-flex>
         </v-layout>
         <v-text-field
           v-model="jobFunctions"
           :rules="[rules.jobFunctionsCheck(1)]"
-          outline
           color="deep-purple"
           label="Job Functions"
           style="min-height: 96px"
@@ -117,7 +107,6 @@
         ></v-text-field>
         <v-text-field
           v-model="applicationLink"
-          outline
           color="deep-purple"
           label="Application Link"
           style="min-height: 96px"
@@ -160,7 +149,6 @@
               style="min-height: 96px"
               chips
               label="Degree"
-              outline
             ></v-select>
           </v-flex>
         </v-layout>

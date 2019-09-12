@@ -22,7 +22,6 @@
                   <v-text-field
                     v-model="fullName"
                     :rules="[rules.fullNameCheck(1)]"
-                    outline
                     color="deep-purple"
                     label="Full Name"
                     style="min-height: 96px"
@@ -31,15 +30,13 @@
                   <v-text-field
                     v-model="email"
                     :rules="[rules.email]"
-                    outline
                     color="deep-purple"
                     label="Email"
                     type="email"
                   ></v-text-field>
                   <v-text-field
                     v-model="password"
-                    :rules="[rules.password, rules.length(6)]"
-                    outline
+                    :rules="[rules.length(6)]"
                     color="deep-purple"
                     counter="6"
                     label="Password"
@@ -48,7 +45,6 @@
                   ></v-text-field>
                   <v-text-field
                     v-model="phone"
-                    outline
                     color="deep-purple"
                     label="Phone"
                     mask="phone"
@@ -56,7 +52,6 @@
                   <v-text-field
                     v-model="companyName"
                     :rules="[rules.companyNameCheck(1)]"
-                    outline
                     color="deep-purple"
                     label="Company Name"
                     style="min-height: 96px"
@@ -64,7 +59,6 @@
                   ></v-text-field>
                   <v-text-field
                     v-model="companyWebSiteUrl"
-                    outline
                     color="deep-purple"
                     label="Company WebSite Url"
                     style="min-height: 46px"
