@@ -23,6 +23,7 @@ export default new Router({
         },
         {
             path: '/admin/signup',
+            meta: {layout: 'userpages'},
             name: 'signup',
             component: () => import('../AdminPage/UserPages/Signup.vue'),
         },
