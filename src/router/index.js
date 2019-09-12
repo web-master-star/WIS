@@ -32,6 +32,11 @@ export default new Router({
             name: 'userprofile',
             component: () => import('../AdminPage/UserPages/UserProfile.vue'),
         },
+        {
+            path: '/admin/companyprofile',
+            name: 'companyprofile',
+            component: () => import('../AdminPage/UserPages/CompanyProfile.vue'),
+        },
 
         // Product Lists
 
