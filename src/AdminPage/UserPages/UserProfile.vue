@@ -25,7 +25,7 @@
       ></v-text-field>
       <v-text-field
         v-model="password"
-        :rules="[rules.password, rules.length(6)]"
+        :rules="[rules.length(6)]"
         color="deep-purple"
         counter="6"
         label="Password"
