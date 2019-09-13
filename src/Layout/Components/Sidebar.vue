@@ -70,6 +70,10 @@
                                 href: '/admin/job-list',
                                 title: 'JobList',
                             },
+                            {
+                                href: '/admin/application-list',
+                                title: 'ApplicationList',
+                            },
                         ]
                     },
                     {
