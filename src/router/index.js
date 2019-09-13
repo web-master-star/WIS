@@ -49,9 +49,9 @@ export default new Router({
             component: () => import('../AdminPage/UserPages/JobList.vue'),
         },
         {
-            path: '/admin/application-list',
-            name: 'applicationlist',
-            component: () => import('../AdminPage/UserPages/ApplicationList.vue'),
+            path: '/admin/applicant-list',
+            name: 'applicantlist',
+            component: () => import('../AdminPage/UserPages/ApplicantList.vue'),
         },
 
         // Product Lists

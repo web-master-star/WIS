@@ -71,8 +71,8 @@
                                 title: 'JobList',
                             },
                             {
-                                href: '/admin/application-list',
-                                title: 'ApplicationList',
+                                href: '/admin/applicant-list',
+                                title: 'ApplicantList',
                             },
                         ]
                     },
