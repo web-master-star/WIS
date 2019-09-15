@@ -224,7 +224,7 @@
         </div>
       </div>
       <b-row>
-        <b-col md="6">
+        <b-col md="12">
           <b-card title="List of users" class="main-card mb-3">
             <v-data-table
               :headers="userHeadersDataTable"
@@ -246,7 +246,7 @@
             </v-data-table>
           </b-card>
         </b-col>
-        <b-col md="6">
+        <!-- <b-col md="6">
           <b-card title="Unreleased product lists" class="main-card mb-3">
             <v-data-table
               :headers="productsByUserHeadersDataTable"
@@ -267,9 +267,9 @@
               >Your search for "{{ searchItems }}" found no results.</v-alert>
             </v-data-table>
           </b-card>
-        </b-col>
+        </b-col> -->
       </b-row>
-      <b-row>
+      <!-- <b-row>
         <b-col md="6">
           <b-card title="Number of products by category" class="main-card mb-3">
             <categorybarhoriz></categorybarhoriz>
@@ -280,7 +280,7 @@
             <productbarhoriz></productbarhoriz>
           </b-card>
         </b-col>
-      </b-row>
+      </b-row> -->
     </div>
   </div>
 </template>

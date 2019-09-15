@@ -4,7 +4,7 @@
       <v-btn icon>
         <v-icon>edit</v-icon>
       </v-btn>
-      <v-card-title class="title font-weight-regular">Job Post</v-card-title>
+      <v-card-title class="title font-weight-regular">Post a Job</v-card-title>
     </v-toolbar>
     <v-form ref="form" v-model="form" class="pa-3 pt-4">
       <v-container fluid>
@@ -13,29 +13,26 @@
           :rules="[rules.jobTitleCheck(1)]"
           color="deep-purple"
           label="Title"
-          style="min-height: 96px"
           type="text"
         ></v-text-field>
         <v-layout row wrap>
           <v-flex md6>
-            <v-text-field
+            <v-select
               v-model="province"
-              :rules="[rules.provinceCheck(1)]"
+              :items="provinceItems"
               color="deep-purple"
+              chips
               label="Province"
-              style="min-height: 96px"
-              type="text"
-            ></v-text-field>
+            ></v-select>
           </v-flex>
           <v-flex md6>
-            <v-text-field
+            <v-select
               v-model="city"
-              :rules="[rules.cityCheck(1)]"
+              :items="cityItems"
               color="deep-purple"
+              chips
               label="City"
-              style="min-height: 96px"
-              type="text"
-            ></v-text-field>
+            ></v-select>
           </v-flex>
         </v-layout>
         <v-text-field
@@ -43,7 +40,6 @@
           :rules="[rules.responsibilitiesCheck(1)]"
           color="deep-purple"
           label="Responsibilities"
-          style="min-height: 96px"
           type="text"
         ></v-text-field>
         <v-text-field
@@ -51,7 +47,6 @@
           :rules="[rules.qualitificationsCheck(1)]"
           color="deep-purple"
           label="Qualitifications"
-          style="min-height: 96px"
           type="text"
         ></v-text-field>
         <v-textarea
@@ -59,7 +54,6 @@
           :rules="[rules.jobDetailsCheck(1)]"
           color="deep-purple"
           label="Job Details"
-          style="min-height: 46px"
           auto-grow
           rows="15"
         ></v-textarea>
@@ -68,7 +62,6 @@
           :rules="[rules.seniorityLevelCheck(1)]"
           color="deep-purple"
           label="Seniority Level"
-          style="min-height: 96px"
           type="text"
         ></v-text-field>
         <v-layout row wrap>
@@ -78,7 +71,6 @@
               :items="jobFunctionItems"
               :rules="[rules.jobFunctionCheck(jobFunction)]"
               color="deep-purple"
-              style="min-height: 96px"
               chips
               label="Job Function"
               multiple
@@ -90,7 +82,6 @@
               :items="employeementTypeItems"
               :rules="[rules.employeementTypeCheck(employeementType)]"
               color="deep-purple"
-              style="min-height: 96px"
               chips
               label="Employeement Type"
               multiple
@@ -102,14 +93,12 @@
           :rules="[rules.jobFunctionsCheck(1)]"
           color="deep-purple"
           label="Job Functions"
-          style="min-height: 96px"
           type="text"
         ></v-text-field>
         <v-text-field
           v-model="applicationLink"
           color="deep-purple"
           label="Application Link"
-          style="min-height: 96px"
           type="text"
         ></v-text-field>
         <v-layout row wrap>
@@ -146,7 +135,6 @@
               :items="degreeItems"
               :rules="[rules.degreeCheck(degree)]"
               color="deep-purple"
-              style="min-height: 96px"
               chips
               label="Degree"
             ></v-select>
@@ -174,8 +162,20 @@ export default {
     form: false,
     isLoading: false,
     jobTitle: undefined,
-    province: undefined,
-    city: undefined,
+    province: "Province1",
+    provinceItems: [
+      "Province1",
+      "Province2",
+      "Province3",
+      "Province4"
+    ],
+    city: "City1",
+    cityItems: [
+      "City1",
+      "City2",
+      "City3",
+      "City4"
+    ],
     responsibilities: undefined,
     qualitifications: undefined,
     jobDetails: undefined,

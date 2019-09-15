@@ -13,43 +13,27 @@
           :rules="[rules.companyNameCheck(1)]"
           color="deep-purple"
           label="Company Name"
-          style="min-height: 96px"
           type="text"
         ></v-text-field>
         <v-layout row wrap>
-          <v-flex md4>
+          <v-flex md3>
             <vue-dropzone
               ref="myVueDropzone"
               id="dropzone"
               :options="dropzoneOptions"
-              style="height: 275px;"
+              style="height: 220px;"
             ></vue-dropzone>
           </v-flex>
-          <v-flex md8>
+          <v-flex md9>
             <v-select
               v-model="province"
               :items="provinceItems"
               color="deep-purple"
-              style="min-height: 96px"
               chips
               label="Province"
             ></v-select>
-            <v-select
-              v-model="city"
-              :items="cityItems"
-              color="deep-purple"
-              style="min-height: 96px"
-              chips
-              label="City"
-            ></v-select>
-            <v-select
-              v-model="size"
-              :items="sizeItems"
-              color="deep-purple"
-              style="min-height: 96px"
-              chips
-              label="Size"
-            ></v-select>
+            <v-select v-model="city" :items="cityItems" color="deep-purple" chips label="City"></v-select>
+            <v-select v-model="size" :items="sizeItems" color="deep-purple" chips label="Size"></v-select>
           </v-flex>
         </v-layout>
         <v-text-field
