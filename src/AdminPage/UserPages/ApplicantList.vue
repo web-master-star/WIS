@@ -3,28 +3,18 @@
     <v-flex xs12 sm8 offset-sm2>
       <v-card>
         <v-toolbar color="cyan" dark>
-          <v-toolbar-side-icon></v-toolbar-side-icon>
-
-          <v-toolbar-title>Applicant List</v-toolbar-title>
-
+          <v-toolbar-title>Applications</v-toolbar-title>
           <v-spacer></v-spacer>
-
-          <v-btn icon>
-            <v-icon>search</v-icon>
-          </v-btn>
         </v-toolbar>
 
         <v-list two-line>
           <template v-for="(item, index) in applicants">
             <v-subheader v-if="item.header" :key="item.header">{{ item.header }}</v-subheader>
-
             <v-divider v-else-if="item.divider" :key="index" :inset="item.inset"></v-divider>
-
             <v-list-tile v-else :key="item.title" avatar @click>
               <v-list-tile-avatar>
                 <img :src="item.avatar" />
               </v-list-tile-avatar>
-
               <v-list-tile-content>
                 <v-list-tile-title v-html="item.name"></v-list-tile-title>
                 <v-list-tile-sub-title v-html="item.phoneNumber"></v-list-tile-sub-title>
@@ -43,7 +33,6 @@ export default {
   data() {
     return {
       applicants: [
-        { header: "" },
         {
           avatar: "https://cdn.vuetifyjs.com/images/lists/1.jpg",
           name: "John Smith",
