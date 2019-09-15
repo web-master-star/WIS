@@ -2,9 +2,8 @@
   <v-container>
     <v-card>
       <v-toolbar color="deep-purple accent-4" cards dark flat>
-        <v-card-title class="title font-weight-regular">Job List</v-card-title>
+        <v-card-title class="title font-weight-regular">Jobs</v-card-title>
       </v-toolbar>
-      <!-- <v-card-text> -->
       <v-list two-line>
         <template v-for="(item, index) in items">
           <v-list-tile :key="item.title" avatar ripple @click="showDetail();">
@@ -24,7 +23,6 @@
           <v-divider v-if="index + 1 < items.length" :key="index"></v-divider>
         </template>
       </v-list>
-      <!-- </v-card-text> -->
     </v-card>
   </v-container>
 </template>

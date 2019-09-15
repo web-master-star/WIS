@@ -84,12 +84,12 @@
                 </div>
             </div>
         </div>
-        <div class="header-btn-lg">
+        <!-- <div class="header-btn-lg">
             <button type="button" class="hamburger hamburger--elastic" v-bind:class="{ 'is-active': showDrawerSection }"
                     v-on:click="showDrawerSection = !showDrawerSection">
                 <span class="hamburger-box"><span class="hamburger-inner"></span></span>
             </button>
-        </div>
+        </div> -->
 
         <div class="app-drawer-wrapper" v-bind:class="{ 'drawer-open': showDrawerSection }">
             <div class="drawer-nav-btn">

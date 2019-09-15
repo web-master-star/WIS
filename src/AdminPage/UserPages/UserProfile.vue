@@ -4,7 +4,7 @@
       <v-btn icon>
         <v-icon>edit</v-icon>
       </v-btn>
-      <v-card-title class="title font-weight-regular">User Profile</v-card-title>
+      <v-card-title class="title font-weight-regular">My Profile</v-card-title>
     </v-toolbar>
     <v-form ref="form" v-model="form" class="pa-3 pt-4">
       <v-text-field
@@ -12,7 +12,6 @@
         :rules="[rules.fullNameCheck(1)]"
         color="deep-purple"
         label="Full Name"
-        style="min-height: 96px"
         type="text"
       ></v-text-field>
       <v-text-field
@@ -20,16 +19,13 @@
         :rules="[rules.email]"
         color="deep-purple"
         label="Email"
-        style="min-height: 96px"
         type="email"
       ></v-text-field>
       <v-text-field
         v-model="password"
         :rules="[rules.length(6)]"
         color="deep-purple"
-        counter="6"
         label="Password"
-        style="min-height: 96px"
         type="password"
       ></v-text-field>
       <v-text-field
@@ -37,14 +33,12 @@
         :rules="[rules.positionCheck(1)]"
         color="deep-purple"
         label="Position/Title"
-        style="min-height: 96px"
         type="text"
       ></v-text-field>
       <v-select
         v-model="department"
         :items="departmentItems"
         color="deep-purple"
-        style="min-height: 96px"
         chips
         label="Department"
       ></v-select>
